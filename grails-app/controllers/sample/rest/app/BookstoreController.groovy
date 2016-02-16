@@ -9,4 +9,8 @@ class BookstoreController {
     def index() {
         [books: Book.findAll()]
     }
+
+    def otherAction() {
+        render(view: '/noFolderView', model: [books: Book.findAll()])
+    }
 }
