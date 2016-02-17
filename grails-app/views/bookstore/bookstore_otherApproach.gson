@@ -1,0 +1,12 @@
+import sample.rest.app.Book
+
+model {
+    Iterable<Book> books
+}
+
+json {
+    books(books) { Book b ->
+        author b.author
+        name b.name
+    }
+}
